@@ -118,7 +118,7 @@
     <Compile Include="QuickInfo\ValueOrder\ValueOrderSignature.cs" />
     <Compile Include="QuickInfo\ValueOrder\ValueOrderSignatureHelpSource.cs" />
     <Compile Include="QuickInfo\ValueOrder\ValueOrderSignatureHelpSourceProvider.cs" />
-    <Compile Include="source.extension1.cs">
+    <Compile Include="source.extension.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.vsixmanifest</DependentUpon>
@@ -134,7 +134,7 @@
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
       <Generator>VsixManifestGenerator</Generator>
-      <LastGenOutput>source.extension1.cs</LastGenOutput>
+      <LastGenOutput>source.extension.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
