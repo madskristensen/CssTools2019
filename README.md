@@ -1,9 +1,9 @@
 # CSS Tools
 
-[![Build status](https://ci.appveyor.com/api/projects/status/qpdkwo2g3qov6ka8?svg=true)](https://ci.appveyor.com/project/madskristensen/csstools)
+[![Build status](https://ci.appveyor.com/api/projects/status/w27kd5wymudga423?svg=true)](https://ci.appveyor.com/project/madskristensen/csstools2019)
 
 Download this extension from the [VS Marketplace](https://marketplace.visualstudio.com/vsgallery/a2b0e9a8-85c6-4495-8578-dc1da0a8791c)
-or get the [CI build](http://vsixgallery.com/extension/0020efc9-e999-4e6f-a2b6-604127f480bc/).
+or get the [CI build](http://vsixgallery.com/extension/1c63270f-485d-4810-99b8-e9d9de82610c/).
 
 ---------------------------------------
 

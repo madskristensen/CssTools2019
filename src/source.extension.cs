@@ -7,8 +7,8 @@ namespace CssTools
 {
     internal sealed partial class Vsix
     {
-        public const string Id = "0020efc9-e999-4e6f-a2b6-604127f480bc";
-        public const string Name = "CSS Tools";
+        public const string Id = "1c63270f-485d-4810-99b8-e9d9de82610c";
+        public const string Name = "CSS Tools 2019";
         public const string Description = @"Provides additional features to the CSS editor in Visual Studio.";
         public const string Language = "en-US";
         public const string Version = "1.1";
