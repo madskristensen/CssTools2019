@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Forms;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using Microsoft.VisualStudio.Language.Intellisense;
+﻿using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Text;
 using Microsoft.WebTools.Languages.Css.Document;
 using Microsoft.WebTools.Languages.Css.Editor.Document;
@@ -14,6 +6,14 @@ using Microsoft.WebTools.Languages.Css.Parser;
 using Microsoft.WebTools.Languages.Css.TreeItems.Functions;
 using Microsoft.WebTools.Languages.Shared.Editor.EditorHelpers;
 using Microsoft.WebTools.Languages.Shared.Editor.Host;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Forms;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace CssTools
 {
@@ -138,14 +138,14 @@ namespace CssTools
             }
             catch (Exception ex)
             {
-                qiContent.Add(new Image { Source = noPreview });
+                qiContent.Add(new Image { Source = noPreview, Width = 150, Height = 150 });
                 qiContent.Add(ex.Message);
                 return;
             }
 
             if (source == null)
             {
-                qiContent.Add(new Image { Source = noPreview });
+                qiContent.Add(new Image { Source = noPreview, Width = 150, Height = 150 });
                 qiContent.Add("Couldn't locate " + url);
                 return;
             }
@@ -174,12 +174,14 @@ namespace CssTools
             var size = WebEditor.ExportProvider.GetExport<ITextBufferFactoryService>().Value.CreateTextBuffer();
             size.SetText("Loading...");
 
-			source.OnDownloaded(() => size.SetText(source.PixelWidth + "×" + source.PixelHeight));
-			if (source.IsDownloading)
+            source.OnDownloaded(() => size.SetText(source.PixelWidth + "×" + source.PixelHeight));
+            if (source.IsDownloading)
             {
                 EventHandler<System.Windows.Media.ExceptionEventArgs> failure = (s, e) =>
                 {
                     image.Source = noPreview;
+                    image.Width = 150;
+                    image.Height = 150;
                     size.SetText("Couldn't load image: " + e.ErrorException.Message);
                 };
                 source.DecodeFailed += failure;
